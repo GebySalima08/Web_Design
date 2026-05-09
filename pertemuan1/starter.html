@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter Code - Pertemuan 1</title>
+</head>
+<body>
+
+    <!-- h1 sampai h6: Digunakan untuk judul dengan tingkatan ukuran berbeda -->
+    <h1>Profil Mahasiswa IT</h1>
+    <h2>Data Diri</h2>
+    <h3>Sub-Informasi</h3>
+
+    <!-- p: Digunakan untuk membuat paragraf teks -->
+    <p>
+        Selamat datang di halaman web pertama saya. Di sini saya belajar mengenai 
+        dasar-dasar HTML untuk membangun struktur website yang baik.
+    </p>
+
+    <!-- br: Digunakan untuk memaksa teks pindah ke baris baru (Line Break) -->
+    <p>Alamat: Jl. Kampus Raya No. 1 <br> Kota: Banda Aceh</p>
+
+    <!-- img: Digunakan untuk menampilkan gambar. Atribut 'src' adalah sumber file, 'alt' adalah teks jika gambar gagal loading -->
+    <!-- Catatan: Ganti 'foto-profil.jpg' dengan file gambar yang ada di folder mahasiswa -->
+    <img src="https://placehold.co/400x400/png" alt="Foto Profil Mahasiswa" width="400px" height="400px">
+
+    <!-- Cara memunculkan gambar menggunakan src & atribut -->
+    <img src="gambar1.jpg" alt="Foto Profil Mahasiswa" width="800px" height="400px">
+
+    <!-- a: Digunakan untuk membuat link/tautan ke halaman lain -->
+    <p>
+        Kunjungi website resmi kampus di: 
+        <a href="https://www.google.com" target="_blank">Klik di sini</a>
+    </p>
+
+    <hr> <!-- Garis pembatas horizontal -->
+
+    <!-- ul & li: Unordered List (Daftar dengan poin/bullet) -->
+    <h2>Keahlian (Unordered List)</h2>
+    <ul>
+        <li>HTML Dasar</li>
+        <li>Manajemen Folder</li>
+        <li>Penggunaan Git Dasar</li>
+    </ul>
+
+    <!-- ol & li: Ordered List (Daftar dengan penomoran 1, 2, 3) -->
+    <h2>Langkah Belajar (Ordered List)</h2>
+    <ol>
+        <li>Menyiapkan VS Code</li>
+        <li>Membuat file index.html</li>
+        <li>Melakukan Commit ke Git</li>
+    </ol>
+
+    <hr>
+
+    <!-- table: Digunakan untuk menampilkan data dalam bentuk kolom dan baris -->
+    <h2>Jadwal Kuliah (Table)</h2>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <!-- tr: Table Row (Baris) -->
+        <thead>
+            <tr>
+                <!-- th: Table Header (Kepala tabel, teks biasanya tebal) -->
+                <th>Hari</th>
+                <th>Mata Kuliah</th>
+                <th>Ruangan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- td: Table Data (Isi kolom dalam baris) -->
+                <td>Senin</td>
+                <td>Web Dasar</td>
+                <td>Lab Komputer 1</td>
+            </tr>
+            <tr>
+                <td>Rabu</td>
+                <td>Jaringan Komputer</td>
+                <td>Lab Komputer 3</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 - Materi Pertemuan 1 - Pemrograman Web</p>
+    </footer>
+
+</body>
+</html>
