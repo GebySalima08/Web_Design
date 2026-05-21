@@ -1,0 +1,181 @@
+
+
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc; /* Mengubah warna latar belakang seluruh halaman */
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #013651; /* Warna biru langit */
+            color: white;              /* Warna teks h1 & p di dalam header */
+            text-align: center;        /* Membuat semua teks ke tengah */
+            padding: 20px;             /* PADDING: Memberi ruang napas di DALAM header */
+        }
+
+nav{
+  background-color: #2d2d2d;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 16px;
+}
+
+nav a:hover{
+  color: #4da3ff;
+}
+
+/* MAIN */
+.container{
+  width: 900px;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+  border: 1px solid #cfcfcf;
+}
+
+section{
+  margin-bottom: 40px;
+}
+
+/* HERO */
+.hero{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero-text{
+  flex: 1;
+}
+
+.hero-text h2{
+  color: #173b8f;
+  border-bottom: 3px solid #173b8f;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.hero-text p{
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hero-text h3{
+  margin-bottom: 10px;
+}
+
+.hero-text ol{
+  margin-left: 20px;
+  line-height: 1.7;
+}
+
+.logo-lp3i img{
+  width: 220px;
+}
+
+.logo-lp3i {
+            float: right;        /* MEMAKSA gambar bergeser ke KANAN halaman */
+            margin-left: 15px;   /* Memberi jarak agar teks di sebelah kirinya tidak menempel */
+            margin-bottom: 15px;
+            border: 2px solid #cbd5e1;}
+
+            /* SECTION TITLE */
+
+
+section h2{
+  color: #173b8f;
+  border-bottom: 3px solid #173b8f;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+input[type="date"], select {
+            width: 100%;         /* Membuat kotak input memenuhi lebar kolom tabel */
+            padding: 8px;        /* Membuat kotak input lebih tebal dan lega saat diketik */
+            box-sizing: border-box; /* Memastikan padding tidak merusak lebar 100% */
+}
+
+/* TABLE */
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td{
+  border: 1px solid #777;
+  padding: 12px;
+  text-align: left;
+}
+
+table th{
+  background: #f0f0f0;
+}
+
+/* FORM */
+.form-section form{
+  margin-top: 20px;
+}
+
+.form-group{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-group label{
+  width: 180px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select{
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #999;
+}
+
+.radio-box{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button{
+  margin-left: 180px;
+  background-color: #173b8f;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+button:hover{
+  background-color: #26407a;
+}
+
+/* MAP */
+.lokasi iframe{
+  width: 200%;
+  height: 300px;
+  border: 0;
+}
+
+/* FOOTER */
+footer{
+  text-align: center;
+  padding: 20px;
+  color: #555;
+  font-size: 14px;
+}
