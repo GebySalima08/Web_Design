@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Kemahasiswaan</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!-- SEMATIC HEADER  -->
+     <header>
+        <h1>Portal Kemahasiswaan - Kampus Digital</h1>
+        <p>Pendaftaran Unit Kegiatan Mahasiswa (UKM) Periode 2026</p>
+        
+     </header>  
+            <!-- SEMANTIC NAVIGATION -->
+            <nav>
+                    <a href="#">Home</a> |
+                    <a href="#">Daftar UKM</a> |
+                    <a href="#">Situs Kemendikbud</a>
+            </nav>
+         
+        
+    <!-- ISI KONTEN -->
+     <!-- SECTION 1: Elemen HTML Dasar & Contoh Float -->
+     <main class="container">
+
+    <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-text">
+            <h2>Kembangkan Potensimu!</h2>
+
+            <p> 
+                Kuliah bukan hanya tentang belajar di dalam kelas.
+                Mari asah soft skill, kepemimpinan, dan jaringan
+                pertemananmu dengan bergabung ke dalam Unit Kegiatan
+                Mahasiswa (UKM) yang ada di kampus.
+            </p>
+
+            <h3>Alur Pendaftaran Online :</h3>
+
+            <ol>
+                <li>Periksa jadwal kegiatan rutin UKM pada tabel di bawah.</li>
+                <li>Isi formulir pendaftaran dengan data diri yang valid.</li>
+                <li>Pilih satu UKM utama yang ingin kamu ikuti.</li>
+                <li>Klik tombol kirim dan tunggu konfirmasi melalui email.</li>
+            </ol>
+            
+            </div>
+            <div class="logo-box">
+                <br>
+                 <img src="https://upload.wikimedia.org/wikipedia/id/d/d0/Logo_LP3I.png" 
+                 class="logo-lp3i" width="250px" height="250px" alt="Logo Latihan" >
+        </section>
+
+    <!-- TABEL UKM -->
+        <section class="Jadwal-Kegiatan">
+            <h2>Jadwal Kegiatan Rutin UKM Minggu Ini</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hari</th>
+                        <th>Nama UKM</th>
+                        <th>Ruang / Tempat</th>
+                        <th>Jam Kegiatan</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Selasa</td>
+                        <td>UKM Programming (Coding Club)</td>
+                        <td>Lab Komputer Gedung C</td>
+                        <td>16:00 - 18:00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Rabu</td>
+                        <td>UKM Basket</td>
+                        <td>Lapangan Olahraga Indoor</td>
+                        <td>15:30 - 17:30</td>
+                    </tr>
+
+                    <tr>
+                        <td>Kamis</td>
+                        <td>UKM Musik & Seni</td>
+                        <td>Aula Kreatif Mahasiswa</td>
+                        <td>16:00 - 19:00</td>
+                    </tr>  
+                </tbody>
+            </table>
+        </section>
+
+    <!-- FORM PENDAFTARAN -->
+        <section class="form-pendaftaran">
+            <h2>Formulir Pengajuan Anggota Baru</h2>
+
+            <form>
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap      :</label>
+                    <input type="text" id="nama_mhs" name="nama_mhs" required placeholder="Ketik nama di sini...">  
+                </div>  
+
+                <div class="form-group">
+                    <label>Tanggal Daftar      :</label>
+                    <input type="date">
+                </div>
+
+                <div class="form-group">
+                    <label>Pilih UKM            :</label>
+
+                    <select>
+                        <option value="">-- Pilih Organisasi --</option>
+                        <option value="programming">UKM Programming (Coding Club)</option>
+                        <option value="basket">UKM Basket</option>
+                        <option value="musik">UKM Musik & Seni</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Tipe Anggota</label>
+
+                <div class="radio-box">
+                    <input type="radio" name="anggota" checked>
+                    <label>Anggota Reguler</label>
+
+                    <input type="radio" name="anggota">
+                    <label>Calon Pengurus</label>
+                </div>
+                </div>
+
+                <button type="submit">Kirim Pendaftaran</button>
+            </form>
+        </section>
+
+        <!-- MAP -->
+        <section class="map">
+            <h2>Lokasi Kami</h2>
+
+            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d756.2086699161915!2d95.3204269!3d5.5573818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304037487311c00b%3A0xec885f5b12bbd6e9!2sLP3I%20COLLEGE%20BANDA%20ACEH!5e1!3m2!1sid!2sid!4v1779351870630!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        allowfullscreen=""
+        loading="lazy">
+
+            </iframe>
+        </section>
+
+        </main>
+
+    <!-- FOOTER -->
+    <footer>
+        @ 2026 Kampus Digital Indonesia. Hak Cipta Dilindungi Ujian Praktik Pemograman Web.
+    </footer>
+
+</body>
+</html>
