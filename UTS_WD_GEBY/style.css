@@ -1,0 +1,248 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#f5f7f8;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#0f5c63;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:white;
+}
+
+.logo i{
+    font-size:30px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul a{
+    color:white;
+    text-decoration:none;
+}
+
+.login{
+    background:white;
+    color:#0f5c63;
+}
+
+.register{
+    background:#f47b67;
+    color:white;
+}
+
+.nav-btn button{
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* Hero */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px 8%;
+}
+
+.hero-text{
+    width:50%;
+}
+
+.hero-text h1{
+    font-size:50px;
+    color:#0f5c63;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    color:#666;
+    line-height:1.8;
+}
+
+.hero-btn{
+    margin-top:30px;
+}
+
+.hero-btn button{
+    padding:14px 28px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#f47b67;
+    color:white;
+    margin-right:10px;
+}
+
+.outline{
+    background:white !important;
+    border:2px solid #0f5c63 !important;
+    color:#0f5c63 !important;
+}
+
+.hero-image img{
+    width:420px;
+}
+
+/* Search */
+.search-box{
+    padding:60px 8%;
+    text-align:center;
+}
+
+.search-box h2{
+    color:#0f5c63;
+    margin-bottom:20px;
+}
+
+.search{
+    display:flex;
+    justify-content:center;
+}
+
+.search input{
+    width:500px;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px 0 0 10px;
+}
+
+.search button{
+    background:#f47b67;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:0 10px 10px 0;
+}
+
+/* Kategori */
+.kategori{
+    padding:60px 8%;
+}
+
+.kategori h2{
+    text-align:center;
+    color:#0f5c63;
+    margin-bottom:30px;
+}
+
+.kategori-container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    width:180px;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.card i{
+    font-size:40px;
+    color:#f47b67;
+    margin-bottom:15px;
+}
+
+/* Tukang */
+.tukang{
+    padding:60px 8%;
+}
+
+.tukang h2{
+    text-align:center;
+    color:#0f5c63;
+    margin-bottom:30px;
+}
+
+.tukang-container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.tukang-card{
+    width:300px;
+    background:white;
+    border-radius:15px;
+    text-align:center;
+    padding:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.tukang-card img{
+    width:100px;
+}
+
+.tukang-card h3{
+    margin:10px 0;
+}
+
+.tukang-card button{
+    margin-top:15px;
+    background:#f47b67;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* Cara Kerja */
+.cara-kerja{
+    padding:60px 8%;
+    background:white;
+}
+
+.cara-kerja h2{
+    text-align:center;
+    color:#0f5c63;
+    margin-bottom:40px;
+}
+
+.steps{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.step{
+    background:#0f5c63;
+    color:white;
+    padding:20px 30px;
+    border-radius:10px;
+}
+
+/* Footer */
+footer{
+    background:#0f5c63;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
