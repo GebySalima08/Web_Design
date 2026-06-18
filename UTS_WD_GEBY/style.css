@@ -21,12 +21,13 @@ nav{
 .logo{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:8px;
     color:white;
 }
 
-.logo i{
-    font-size:30px;
+.logo img{
+    width: 50px;
+    height:auto;
 }
 
 nav ul{
