@@ -181,7 +181,7 @@ display:none;
     justify-content:space-between;
     align-items:center;
 
-    padding:70px 8%;
+    padding:80px 8%;
 
     background:linear-gradient(
     135deg,
@@ -195,6 +195,7 @@ display:none;
 .hero-text{
 
     width:50%;
+    margin-right:20px;
 
 }
 

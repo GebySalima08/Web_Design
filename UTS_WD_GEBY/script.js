@@ -1,13 +1,27 @@
 // ===============================
 // Tombol Lihat Detail
 // ===============================
-function lihatDetail(){
+function lihatDetail1(){
 
     alert(
         "Detail Pesanan\n\n" +
         "Layanan : Service AC\n" +
         "Status : Sedang Diproses\n" +
         "Tanggal : 12 Agustus 2026"
+    );
+
+}
+
+// ===============================
+// Tombol Lihat Detail
+// ===============================
+function lihatDetail(){
+
+    alert(
+        "Detail Pesanan\n\n" +
+        "Layanan : Service AC\n" +
+        "Status : Dibatalkan\n" +
+        "Tanggal : 2 Agustus 2026"
     );
 
 }
