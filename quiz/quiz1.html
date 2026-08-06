@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 1 - Portal Pendaftaran UKM Kampus</title>
+    <style>
+        /* CSS DASAR (Materi Pertemuan 3) */
+        
+        /* 1. Mengatur background halaman */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* 2. Menghias Header (Warna Navy Kampus) */
+        header {
+            background-color: #1e3a8a; 
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* 3. Menghias Navigasi */
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* 4. Trik Menengahkan Kotak Utama & Box Model */
+        main {
+            background-color: white;
+            max-width: 700px;
+            margin: 20px auto; /* Menengahkan otomatis */
+            padding: 30px;     /* Ruang dalam kotak */
+            border: 1px solid #cbd5e1;
+        }
+
+        /* 5. Spacing antar section */
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            border-bottom: 2px solid #1e3a8a;
+            padding-bottom: 5px;
+        }
+
+        img {
+            float: right; 
+            margin-left: 15px;
+        }
+
+        /* 6. Memastikan elemen form rapi */
+        input[type="text"], input[type="date"], select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        /* 7. Menghias Tombol & Efek Hover */
+        button {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #1d4ed8; /* Warna biru lebih terang saat di-hover */
+        }
+
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #64748b;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. SEMANTIC: Header -->
+    <header>
+        <h1>Portal Kemahasiswaan - Kampus Digital</h1>
+        <p>Pendaftaran Unit Kegiatan Mahasiswa (UKM) Periode 2026</p>
+    </header>
+
+    <!-- 2. SEMANTIC: Navigasi -->
+    <nav>
+        <a href="#">Beranda</a> | 
+        <a href="#">Daftar UKM</a> | 
+        <a href="https://www.kemdikbud.go.id" target="_blank">Situs Kemdikbud</a>
+    </nav>
+
+    <!-- 3. SEMANTIC: Konten Utama -->
+    <main>
+        
+        <!-- SECTION 1: Pengenalan & Gambar -->
+        <section>
+            <h2>Kembangkan Potensimu!</h2>
+            <!-- Gambar Ilustrasi Kampus/UKM Sederhana -->
+            <img src="https://upload.wikimedia.org/wikipedia/id/d/d0/Logo_LP3I.png" width="250" height="250" alt="Logo Kampus">
+            <p>
+                Kuliah bukan hanya tentang belajar di dalam kelas. Mari asah soft skill, kepemimpinan, 
+                dan jaringan pertemananmu dengan bergabung ke dalam Unit Kegiatan Mahasiswa (UKM) yang ada di kampus.
+            </p>
+            <p><strong>Alur Pendaftaran Online:</strong></p>
+            <ol>
+                <li>Periksa jadwal kegiatan rutin UKM pada tabel di bawah.</li>
+                <li>Isi formulir pendaftaran dengan data diri yang valid.</li>
+                <li>Pilih satu UKM utama yang ingin kamu ikuti.</li>
+                <li>Klik tombol kirim dan tunggu konfirmasi melalui email.</li>
+            </ol>
+        </section>
+
+        <!-- SECTION 2: Tabel Jadwal Kegiatan UKM (Materi Pertemuan 1) -->
+        <section>
+            <h2>Jadwal Kegiatan Rutin UKM Minggu Ini</h2>
+            <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; text-align: left;">
+                <thead>
+                    <tr style="background-color: #f1f5f9;">
+                        <th>Hari</th>
+                        <th>Nama UKM</th>
+                        <th>Ruangan / Tempat</th>
+                        <th>Jam Kegiatan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Selasa</td>
+                        <td>UKM Programming (Coding Club)</td>
+                        <td>Lab Komputer Gedung C</td>
+                        <td>16:00 - 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Rabu</td>
+                        <td>UKM Basket</td>
+                        <td>Lapangan Olahraga Indoor</td>
+                        <td>15:30 - 17:30</td>
+                    </tr>
+                    <tr>
+                        <td>Kamis</td>
+                        <td>UKM Musik & Seni</td>
+                        <td>Aula Kreatif Mahasiswa</td>
+                        <td>16:00 - 19:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECTION 3: Form dengan Layout Table (Materi Pertemuan 2 & 3) -->
+        <section>
+            <h2>Formulir Pengajuan Anggota Baru</h2>
+            <form action="#">
+                <table border="0" cellpadding="8" style="width: 100%;">
+                    <tr>
+                        <td style="width: 30%;"><label for="nama">Nama Lengkap</label></td>
+                        <td>:</td>
+                        <td><input type="text" id="nama" name="nama" required placeholder="Masukkan nama mahasiswa"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="tanggal">Tanggal Daftar</label></td>
+                        <td>:</td>
+                        <td><input type="date" id="tanggal" name="tanggal" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="ukm">Pilih UKM</label></td>
+                        <td>:</td>
+                        <td>
+                            <select id="ukm" name="ukm" required>
+                                <option value="">-- Pilih Organisasi --</option>
+                                <option value="programming">UKM Programming</option>
+                                <option value="basket">UKM Basket</option>
+                                <option value="musik">UKM Musik</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Tipe Anggota</label></td>
+                        <td>:</td>
+                        <td>
+                            <input type="radio" id="reguler" name="tipe" value="reguler" checked> 
+                            <label for="reguler">Anggota Reguler</label>
+                            <input type="radio" id="pengurus" name="tipe" value="pengurus"> 
+                            <label for="pengurus" style="color: #1e3a8a; font-weight: bold;">Calon Pengurus</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <br>
+                            <button type="submit">Kirim Pendaftaran</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+
+        <!-- Section Map -->
+         <section>
+            <h2>Lokasi Kami</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248.19159721745697!2d95.32056784913956!3d5.557301705973919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304037487311c00b%3A0xec885f5b12bbd6e9!2sLP3I%20COLLEGE%20BANDA%20ACEH!5e0!3m2!1sid!2sid!4v1779090649753!5m2!1sid!2sid" 
+                width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </section>
+
+    </main>
+
+    <!-- 4. SEMANTIC: Footer -->
+    <footer>
+        <p>&copy; 2026 Kampus Digital Indonesia. Hak Cipta Dilindungi Ujian Praktik Pemrograman Web.</p>
+    </footer>
+
+</body>
+</html>

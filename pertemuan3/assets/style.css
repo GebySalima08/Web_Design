@@ -1,0 +1,36 @@
+body {
+    background-color: red;
+}
+
+.bg-color {
+    background-color: white;
+}
+
+h3 {
+    color: aqua;
+}
+
+h2{
+    color: red;
+}
+
+p {
+    color: brown;
+    font-size: 20px;
+    font-weight: bold;
+    align-items: justify;
+}
+
+
+
+#list-hobi {
+    color: white;
+}
+
+.sub {
+    color: green;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.kotak { width: 300px; padding: 20px; border: 1px solid; margin: 10px; }
+

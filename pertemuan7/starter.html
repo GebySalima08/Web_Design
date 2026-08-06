@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kloning Landing Page LP3I - Referensi Mengajar</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Style Kecil untuk Warna Identitas Brand (Navy & Kuning LP3I) -->
+    <style>
+        .bg-navy { background-color: #0d233a; }
+        .text-navy { color: #0d233a; }
+        .bg-yellow { background-color: #facc15; }
+        .btn-yellow { 
+            background-color: #facc15; 
+            color: #0d233a; 
+            font-weight: bold; 
+        }
+        .btn-yellow:hover { 
+            background-color: #eab308; 
+            color: #0d233a;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="#">LP3I <span class="text-warning">CLONE</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav mx-auto">
+                    <a class="nav-link active px-3" href="#">Beranda</a>
+                    <a class="nav-link px-3" href="#">Tentang Kami</a>
+                    <a class="nav-link px-3" href="#">Program Studi</a>
+                    <a class="nav-link px-3" href="#">Mitra Kerja</a>
+                </div>
+            </div>
+            <a class="btn btn-yellow btn-sm ms-lg-3 mt-2 mt-lg-0" href="#">Daftar Online (PMB)</a>
+        </div>
+    </nav>
+    <!-- 1. HEADER & NAVBAR -->
+    <!-- navbar-expand-lg membuat menu lipat di layar kecil, shadow-sm untuk estetika -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-navy sticky-top shadow-sm">
+        <div class="container">
+            <!-- Brand/Logo -->
+            <a class="navbar-brand fw-bold text-wrap" href="#" style="max-width: 150px;">
+                LP3I <span class="text-warning">CLONE</span>
+            </a>
+            
+            <!-- Tombol Hamburger untuk Mobile -->
+            <button class="navbar-toggler" type="text/button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Menu Navigasi -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto align-items-lg-center">
+                    <a class="nav-link active px-3" href="#">Beranda</a>
+                    <a class="nav-link px-3" href="#">Tentang Kami</a>
+                    <a class="nav-link px-3" href="#">Program Studi</a>
+                    <a class="nav-link px-3" href="#">Mitra Kerja</a>
+                    <!-- Tombol Aksi Utama -->
+                    <a class="btn btn-yellow btn-sm ms-lg-3 mt-2 mt-lg-0" href="#">Daftar Online (PMB)</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO SECTION (BANNER UTAMA) -->
+    <!-- Menggunakan layout 2 kolom (Teks di kiri, Ilustrasi/Gambar di kanan) -->
+    <div class="bg-navy text-white py-5 position-relative border-bottom border-warning border-5">
+        <div class="container py-lg-5">
+            <div class="row align-items-center g-5">
+                <!-- Kolom Teks -->
+                <div class="col-md-6 text-center text-md-start">
+                    <span class="badge bg-yellow text-navy mb-3 fw-bold px-3 py-2">KULIAH SIAP KERJA</span>
+                    <h1 class="display-4 fw-bold lh-sm mb-3">Tepat Cepat <br><span class="text-warning">Kerja!</span></h1>
+                    <p class="lead text-white-50 mb-4">
+                        Pelopor pendidikan vokasi yang berorientasi kerja. Kami menghubungkan mahasiswa langsung dengan ribuan mitra perusahaan industri terkemuka.
+                    </p>
+                    <div class="d-grid d-md-flex gap-3">
+                        <a href="#" class="btn btn-yellow btn-lg px-4">Download Brosur</a>
+                        <a href="#" class="btn btn-outline-light btn-lg px-4">Konsultasi Virtual</a>
+                    </div>
+                </div>
+                <!-- Kolom Gambar Refrensi -->
+                <div class="col-md-6 text-center">
+                    <img src="https://via.placeholder.com/500x350/1e293b/ffffff?text=Ilustrasi+Mahasiswa+Vokasi" 
+                         alt="Mahasiswa LP3I" 
+                         class="img-fluid rounded-3 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. VALUE PROPOSITION / KEUNGGULAN (GRID SYSTEM 3 KOLOM) -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-navy">Kenapa Harus Memilih Kami?</h2>
+            <p class="text-muted">Keunggulan ekosistem pendidikan yang tidak didapatkan di tempat lain</p>
+        </div>
+
+        <div class="row g-4 text-center">
+            <!-- Kardus 1 -->
+            <div class="col-md-4">
+                <div class="card p-4 h-100 border-0 shadow-sm">
+                    <div class="mx-auto bg-warning-subtle text-warning rounded-circle p-3 mb-3" style="width: 70px; height: 70px;">
+                        <!-- Menggunakan representasi teks pengganti icon -->
+                        <span class="fs-4 fw-bold">🤝</span>
+                    </div>
+                    <h5 class="fw-bold text-navy">Jaminan Penempatan Kerja</h5>
+                    <p class="text-muted small m-0">Memiliki jaringan relasi perusahaan yang luas untuk penyaluran kerja mahasiswa sebelum lulus.</p>
+                </div>
+            </div>
+            <!-- Kardus 2 -->
+            <div class="col-md-4">
+                <div class="card p-4 h-100 border-0 shadow-sm">
+                    <div class="mx-auto bg-primary-subtle text-primary rounded-circle p-3 mb-3" style="width: 70px; height: 70px;">
+                        <span class="fs-4 fw-bold">👨‍🏫</span>
+                    </div>
+                    <h5 class="fw-bold text-navy">Dosen Praktisi Industri</h5>
+                    <p class="text-muted small m-0">Diajar langsung oleh profesional yang aktif di bidangnya, memastikan materi selalu relevan.</p>
+                </div>
+            </div>
+            <!-- Kardus 3 -->
+            <div class="col-md-4">
+                <div class="card p-4 h-100 border-0 shadow-sm">
+                    <div class="mx-auto bg-success-subtle text-success rounded-circle p-3 mb-3" style="width: 70px; height: 70px;">
+                        <span class="fs-4 fw-bold">📜</span>
+                    </div>
+                    <h5 class="fw-bold text-navy">Sertifikasi Kompetensi</h5>
+                    <p class="text-muted small m-0">Lulusan dibekali sertifikasi keahlian resmi berskala nasional untuk memperkuat CV profesional.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. PROGRAM STUDI / KAMPUS SECTION (GRID SYSTEM & CARDS) -->
+    <div class="bg-white py-5">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 text-center text-md-start">
+                <div>
+                    <h2 class="fw-bold text-navy m-0">Program Studi Pilihan</h2>
+                    <p class="text-muted">Kurikulum berbasis praktik dengan serapan industri tinggi</p>
+                </div>
+                <a href="#" class="btn btn-outline-dark btn-sm px-4">Lihat Semua Jurusan &raquo;</a>
+            </div>
+
+            <div class="row g-4">
+                <!-- Program 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm overflow-hidden">
+                        <img src="https://via.placeholder.com/400x220/0d233a/ffffff?text=Informatika" class="card-img-top" alt="Teknologi">
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold text-navy">Manajemen Informatika</h5>
+                            <p class="card-text text-muted small">Fokus pada pengembangan aplikasi web, mobile, database administrator, dan jaringan komputer.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Program 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm overflow-hidden">
+                        <img src="https://via.placeholder.com/400x220/0d233a/ffffff?text=Akuntansi" class="card-img-top" alt="Akuntansi">
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold text-navy">Komputerisasi Akuntansi</h5>
+                            <p class="card-text text-muted small">Menggabungkan ilmu akuntansi keuangan dengan sistem teknologi informasi perpajakan digital.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Program 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm overflow-hidden">
+                        <img src="https://via.placeholder.com/400x220/0d233a/ffffff?text=Administrasi" class="card-img-top" alt="Bisnis">
+                        <div class="card-body p-4">
+                            <h5 class="card-title fw-bold text-navy">Administrasi Bisnis</h5>
+                            <p class="card-text text-muted small">Mempelajari tata kelola operasional bisnis modern, manajemen SDM, dan sekretaris eksekutif.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. FOOTER Sederhana -->
+    <footer class="bg-navy text-white-50 py-4 border-top border-warning border-3">
+        <div class="container text-center text-md-between d-md-flex align-items-center">
+            <p class="mb-2 mb-md-0 small">&copy; 2026 Universitas/Politeknik LP3I Clone. Materi Praktik Pengembangan Web.</p>
+            <div class="small">
+                <a href="#" class="text-white-50 text-decoration-none me-3">Kebijakan Privasi</a>
+                <a href="#" class="text-white-50 text-decoration-none">Syarat & Ketentuan</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle dengan Popper CDN (Wajib untuk mengaktifkan dropdown/navbar mobile) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

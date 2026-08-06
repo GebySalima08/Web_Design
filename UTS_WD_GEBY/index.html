@@ -8,47 +8,107 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
+<script src="script.js"></script>
 <body>
 
     <!-- Navbar -->
-    <nav>
-        <div class="logo">
-            <img src="logo gezyro.png" alt="Gezyro Logo">
-            <h2>GEZYRO</h2>
-        </div>
+    <!-- Navbar -->
+<nav>
 
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Layanan</a></li>
-            <li><a href="#">Tukang</a></li>
-            <li><a href="#">Pesanan</a></li>
-        </ul>
+    <div class="logo">
+        <img src="logo gezyro.png" alt="Gezyro Logo">
+        <h2>GEZYRO</h2>
+    </div>
 
-        <div class="nav-btn">
-            <button class="login">Masuk</button>
-            <button class="register">Daftar</button>
-        </div>
-    </nav>
+    <!-- Tombol Hamburger -->
+    <div class="menu-toggle" id="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
 
+    <ul id="menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
+        <li><a href="pesanan.html">Pesanan</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+
+    <div class="nav-btn">
+        <button class="login">Masuk</button>
+        <button class="register">Daftar</button>
+    </div>
+
+</nav>
     <!-- Hero -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Booking Tukang Profesional Dengan Mudah</h1>
-            <p>
-                Temukan tukang terpercaya untuk kebutuhan rumah,
-                listrik, AC, bangunan, pipa, dan renovasi.
-            </p>
+    <!-- ================= HERO ================= -->
 
-            <div class="hero-btn">
-                <button>Pesan Sekarang</button>
-                <button class="outline">Lihat Tukang</button>
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>
+            Booking Tukang Profesional
+            <span>Lebih Mudah</span>
+        </h1>
+
+        <p>
+            Gezyro membantu Anda menemukan tukang terpercaya
+            untuk AC, listrik, bangunan, cat, dan pipa hanya
+            dalam beberapa menit.
+        </p>
+
+        <div class="hero-btn">
+
+            <button class="booking-btn">
+                Pesan Sekarang
+            </button>
+
+            <button class="outline">
+                Lihat Layanan
+            </button>
+
+        </div>
+
+        <!-- Statistik -->
+
+        <div class="hero-info">
+
+            <div>
+
+                <h2>500+</h2>
+
+                <p>Tukang</p>
+
             </div>
+
+            <div>
+
+                <h2>2.500+</h2>
+
+                <p>Pelanggan</p>
+
+            </div>
+
+            <div>
+
+                <h2>4.9 ★</h2>
+
+                <p>Rating</p>
+
+            </div>
+
         </div>
 
-        <div class="hero-image">
-            <img src="fotos tukang.png" alt="Tukang">
-        </div>
-    </section>
+    </div>
+
+
+    <div class="hero-image">
+
+        <img src="fotos tukang.png">
+
+    </div>
+
+</section>
 
     <!-- Search -->
     <section class="search-box">
@@ -102,7 +162,7 @@
 
             <div class="tukang-card">
                 <img src="tukang ac.png">
-                <h3>Budi AC</h3>
+                <h3>Ahmad AC</h3>
                 <p>⭐ 4.8 (500)</p>
                 <p>Mulai Rp100.000</p>
                 <button>Pesan Sekarang</button>
@@ -118,7 +178,7 @@
 
             <div class="tukang-card">
                 <img src="tukang bangunan.png">
-                <h3>Rahmat Bangunan</h3>
+                <h3>Fahri Bangunan</h3>
                 <p>⭐ 4.7 (300)</p>
                 <p>Mulai Rp120.000</p>
                 <button>Pesan Sekarang</button>

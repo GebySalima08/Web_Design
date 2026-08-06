@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Douceur – Detail Informasi Kue</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3" href="index.html">La<span class="text-danger">Douceur</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center gap-2">
+        <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold active" href="list-kue.html">Daftar Kue</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="transaksi.html">Transaksi & Riwayat</a></li>
+        <li class="nav-item ms-lg-2"><a href="list-kue.html" class="btn btn-danger fw-bold">Pesan Sekarang</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <!-- Card Detail Kue -->
+      <div class="card border-0 shadow-sm p-4 rounded-4" id="card-detail">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-5 text-center bg-light rounded-4 py-5" style="font-size: 8rem;" id="detail-emoji">
+            🎂
+          </div>
+          <div class="col-md-7">
+            <span class="badge bg-danger mb-2" id="detail-badge">Artisan</span>
+            <h2 class="fw-bold mb-2" id="detail-nama">Nama Kue</h2>
+            <h4 class="text-danger fw-bold mb-3" id="detail-harga">Rp 0</h4>
+            <p class="text-secondary mb-3" id="detail-deskripsi">Deskripsi singkat kue.</p>
+            <div class="mb-4">
+              <h6 class="fw-bold text-dark mb-1">Informasi Detail / Bahan-Bahan:</h6>
+              <p class="text-secondary small mb-0" id="detail-info">Bahan-bahan kue.</p>
+            </div>
+            <div class="d-flex gap-3">
+              <a href="list-kue.html" class="btn btn-outline-dark fw-bold px-4">Kembali</a>
+              <a href="#" class="btn btn-danger fw-bold px-4" id="btn-pesan-sekarang">Pesan Sekarang</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Fallback Error jika Kue tidak ditemukan -->
+      <div class="alert alert-warning text-center d-none" id="error-fallback">
+        <h4>Kue tidak ditemukan!</h4>
+        <p class="mb-3">Kue yang Anda cari tidak tersedia di menu kami saat ini.</p>
+        <a href="list-kue.html" class="btn btn-warning fw-bold">Kembali ke Daftar Kue</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white pt-5 pb-4 mt-5">
+  <div class="container">
+    <div class="row g-4 mb-4">
+      <div class="col-lg-4">
+        <h4 class="fw-bold mb-3">La<span class="text-danger">Douceur</span></h4>
+        <p class="text-white-50 small">Toko kue artisan di Banda Aceh yang menghadirkan cita rasa premium dengan sentuhan lokal yang hangat. Berdiri sejak 2015.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="fw-bold mb-3">Menu</h6>
+        <ul class="list-unstyled text-white-50 small">
+          <li class="mb-2"><a href="list-kue.html" class="text-decoration-none text-white-50">Kue Ulang Tahun</a></li>
+          <li class="mb-2"><a href="list-kue.html" class="text-decoration-none text-white-50">Cheesecake</a></li>
+          <li class="mb-2"><a href="list-kue.html" class="text-decoration-none text-white-50">Cupcake</a></li>
+          <li class="mb-2"><a href="list-kue.html" class="text-decoration-none text-white-50">Hamper</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h6 class="fw-bold mb-3">Informasi</h6>
+        <ul class="list-unstyled text-white-50 small">
+          <li class="mb-2"><a href="index.html" class="text-decoration-none text-white-50">Tentang Kami</a></li>
+          <li class="mb-2"><a href="index.html" class="text-decoration-none text-white-50">Cara Memesan</a></li>
+          <li class="mb-2"><a href="index.html" class="text-decoration-none text-white-50">Syarat & Ketentuan</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h6 class="fw-bold mb-3">Hubungi Kami</h6>
+        <p class="text-white-50 small mb-1">📍 Jl. Teuku Umar No. 45, Banda Aceh</p>
+        <p class="text-white-50 small mb-1">☎️ +62 812-3456-7890</p>
+        <p class="text-white-50 small">📧 hello@ladouceur.id</p>
+      </div>
+    </div>
+    <div class="border-top border-secondary pt-3 mt-3 text-center text-md-start d-md-flex justify-content-between text-white-50 small">
+      <div>© 2026 La Douceur. Semua hak dilindungi.</div>
+      <div>Dibuat dengan ❤️ di Banda Aceh</div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // 1. Data Kue Tersedia (Sederhana untuk Pemula)
+  const daftarKue = [
+    {
+      id: 1,
+      nama: "Kue Ulang Tahun Artisan",
+      harga: 185000,
+      emoji: "🎂",
+      badge: "Terlaris",
+      deskripsi: "Desain sesuai keinginanmu – foto edible print, fondant 3D, atau dekorasi floral segar.",
+      detail: "Kue ulang tahun dengan bahan premium pilihan. Anda bisa memesan varian rasa cokelat, vanila, atau red velvet. Cocok untuk perayaan ulang tahun atau pesta spesial."
+    },
+    {
+      id: 2,
+      nama: "Cheesecake Mangga",
+      harga: 95000,
+      emoji: "🍰",
+      badge: "Favorit",
+      deskripsi: "Perpaduan cream cheese lembut dengan saus mangga segar lokal – creamy, dan segar sempurna.",
+      detail: "Dibuat dengan keju krim premium dan mangga Harum Manis segar dari Aceh. Sangat lezat disajikan dalam keadaan dingin."
+    },
+    {
+      id: 3,
+      nama: "Cupcake Bouquet",
+      harga: 250000,
+      emoji: "🧁",
+      badge: "Spesial",
+      deskripsi: "Rangkaian cupcake cantik berbentuk bunga – hadiah yang unik dan bisa dimakan.",
+      detail: "Satu buket terdiri dari 12 cupcake lezat dengan hiasan buttercream berbentuk mawar dan bunga lainnya. Cocok sebagai hadiah ulang tahun atau anniversary."
+    },
+    {
+      id: 4,
+      nama: "Tiramisu Klasik",
+      harga: 120000,
+      emoji: "🍮",
+      badge: "Klasik",
+      deskripsi: "Kue khas Italia dengan aroma kopi espresso yang harum dipadu mascarpone cheese yang lembut.",
+      detail: "Lapisan biskuit ladyfinger yang direndam espresso premium, dilapisi krim mascarpone manis dan ditaburi bubuk kakao berkualitas tinggi."
+    },
+    {
+      id: 5,
+      nama: "Brownies Panggang Almond",
+      harga: 80000,
+      emoji: "🍫",
+      badge: "Populer",
+      deskripsi: "Brownies cokelat dengan tekstur fudgy dan bagian luar yang shiny crust bertabur almond renyah.",
+      detail: "Menggunakan cokelat hitam murni (dark chocolate) pilihan untuk rasa manis pahit yang seimbang, ditambah taburan kacang almond yang gurih."
+    },
+    {
+      id: 6,
+      nama: "Macaron Perancis",
+      harga: 150000,
+      emoji: "🍪",
+      badge: "Manis",
+      deskripsi: "Kue manis mungil khas Perancis dengan tekstur renyah di luar dan lembut di dalam.",
+      detail: "Satu kotak berisi 10 buah macaron dengan aneka rasa menarik seperti matcha, strawberry, cokelat, vanila, dan salted caramel."
+    }
+  ];
+
+  // Format Angka ke Rupiah
+  function formatRupiah(angka) {
+    return "Rp " + new Intl.NumberFormat("id-ID").format(angka);
+  }
+
+  // Fungsi memproses detail kue berdasarkan ID di URL
+  function inisialisasiDetail() {
+    // Membaca ID kue dari URL (?id=X)
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = parseInt(urlParams.get('id'));
+
+    // Cari data kue yang sesuai
+    const kue = daftarKue.find(k => k.id === id);
+
+    if (kue) {
+      // Masukkan data kue ke HTML
+      document.getElementById('detail-emoji').innerText = kue.emoji;
+      document.getElementById('detail-badge').innerText = kue.badge;
+      document.getElementById('detail-nama').innerText = kue.nama;
+      document.getElementById('detail-harga').innerText = formatRupiah(kue.harga);
+      document.getElementById('detail-deskripsi').innerText = kue.deskripsi;
+      document.getElementById('detail-info').innerText = kue.detail;
+
+      // Atur link tombol "Pesan Sekarang" ke halaman transaksi
+      const btnPesan = document.getElementById('btn-pesan-sekarang');
+      btnPesan.href = `transaksi.html?id=${kue.id}`;
+    } else {
+      // Sembunyikan detail card, tampilkan error fallback
+      document.getElementById('card-detail').classList.add('d-none');
+      document.getElementById('error-fallback').classList.remove('d-none');
+    }
+  }
+
+  // Jalankan inisialisasi saat halaman dimuat
+  window.onload = function() {
+    inisialisasiDetail();
+  };
+</script>
+</body>
+</html>

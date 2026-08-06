@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Douceur – Simulasi Transaksi Pemesanan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3" href="index.html">La<span class="text-danger">Douceur</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center gap-2">
+        <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="list-kue.html">Daftar Kue</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold active" href="transaksi.html">Transaksi & Riwayat</a></li>
+        <li class="nav-item ms-lg-2"><a href="list-kue.html" class="btn btn-danger fw-bold">Pesan Sekarang</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-5">
+  <div class="row g-4">
+    <!-- Form Pemesanan (Kiri) -->
+    <div class="col-lg-6">
+      <div class="card border-0 shadow-sm p-4 rounded-4">
+        <h3 class="fw-bold mb-4">Simulasi Pemesanan Kue</h3>
+        
+        <!-- Preview Kue yang Terpilih -->
+        <div class="card bg-light border-0 p-3 mb-4 rounded-3 d-flex flex-row align-items-center gap-3">
+          <div class="fs-1" id="preview-kue-emoji">🎂</div>
+          <div>
+            <h6 class="fw-bold mb-1" id="preview-kue-nama">Pilih kue terlebih dahulu</h6>
+            <span class="text-danger fw-bold small" id="preview-kue-harga">Rp 0</span>
+          </div>
+        </div>
+        
+        <form id="form-pemesanan" onsubmit="prosesPemesanan(event)">
+          <!-- Dropdown Pilihan Kue (Untuk mempermudah pemilihan/mengubah kue) -->
+          <div class="mb-3">
+            <label for="select-kue" class="form-label fw-semibold">Pilih Kue</label>
+            <select class="form-select" id="select-kue" onchange="ubahPilihanKue()" required>
+              <option value="" disabled selected>-- Pilih Kue --</option>
+              <!-- Diisi dinamis oleh JS -->
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="input-nama" class="form-label fw-semibold">Nama Pemesan</label>
+            <input type="text" class="form-control" id="input-nama" placeholder="Masukkan nama Anda" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="input-qty" class="form-label fw-semibold">Jumlah (Qty)</label>
+            <input type="number" class="form-control" id="input-qty" min="1" value="1" oninput="hitungTotal()" required>
+          </div>
+          
+          <div class="mb-4 pt-3 border-top d-flex justify-content-between align-items-center">
+            <span class="fw-bold text-secondary">Total Pembayaran:</span>
+            <span class="fs-4 fw-bold text-danger" id="transaksi-total-harga">Rp 0</span>
+          </div>
+          
+          <button type="submit" class="btn btn-danger w-100 fw-bold py-2 rounded-3">Konfirmasi Pesan</button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Riwayat Transaksi (Kanan) -->
+    <div class="col-lg-6">
+      <div class="card border-0 shadow-sm p-4 rounded-4 h-100">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="fw-bold mb-0">Riwayat Transaksi</h3>
+          <button class="btn btn-sm btn-outline-secondary fw-bold" onclick="hapusRiwayat()">Hapus Semua</button>
+        </div>
+        
+        <div class="table-responsive">
+          <table class="table table-hover align-middle">
+            <thead class="table-light">
+              <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Kue</th>
+                <th>Qty</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="tabel-riwayat">
+              <tr>
+                <td colspan="5" class="text-center text-secondary py-4">Belum ada transaksi pemesanan.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white pt-5 pb-4 mt-5">
+  <div class="container">
+    <div class="row g-4 mb-4">
+      <div class="col-lg-4">
+        <h4 class="fw-bold mb-3">La<span class="text-danger">Douceur</span></h4>
+        <p class="text-white-50 small">Toko kue artisan di Banda Aceh yang menghadirkan cita rasa premium dengan sentuhan lokal yang hangat. Berdiri sejak 2015.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="fw-bold mb-3">Menu</h6>
+        <ul class="list-unstyled text-white-50 small">
+          <li class="mb-2"><a href="list-kue.html" class="text-decoration-none text-white-50">Kue Ulang Tahun</a></li>
+          <li class="mb-2"><a href="list-kue.html" class="text-decoration-none text-white-50">Cheesecake</a></li>
+          <li class="mb-2"><a href="list-kue.html" class="text-decoration-none text-white-50">Cupcake</a></li>
+          <li class="mb-2"><a href="list-kue.html" class="text-decoration-none text-white-50">Hamper</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h6 class="fw-bold mb-3">Informasi</h6>
+        <ul class="list-unstyled text-white-50 small">
+          <li class="mb-2"><a href="index.html" class="text-decoration-none text-white-50">Tentang Kami</a></li>
+          <li class="mb-2"><a href="index.html" class="text-decoration-none text-white-50">Cara Memesan</a></li>
+          <li class="mb-2"><a href="index.html" class="text-decoration-none text-white-50">Syarat & Ketentuan</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h6 class="fw-bold mb-3">Hubungi Kami</h6>
+        <p class="text-white-50 small mb-1">📍 Jl. Teuku Umar No. 45, Banda Aceh</p>
+        <p class="text-white-50 small mb-1">☎️ +62 812-3456-7890</p>
+        <p class="text-white-50 small">📧 hello@ladouceur.id</p>
+      </div>
+    </div>
+    <div class="border-top border-secondary pt-3 mt-3 text-center text-md-start d-md-flex justify-content-between text-white-50 small">
+      <div>© 2026 La Douceur. Semua hak dilindungi.</div>
+      <div>Dibuat dengan ❤️ di Banda Aceh</div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // 1. Data Kue Tersedia (Sederhana untuk Pemula)
+  const daftarKue = [
+    {
+      id: 1,
+      nama: "Kue Ulang Tahun Artisan",
+      harga: 185000,
+      emoji: "🎂"
+    },
+    {
+      id: 2,
+      nama: "Cheesecake Mangga",
+      harga: 95000,
+      emoji: "🍰"
+    },
+    {
+      id: 3,
+      nama: "Cupcake Bouquet",
+      harga: 250000,
+      emoji: "🧁"
+    },
+    {
+      id: 4,
+      nama: "Tiramisu Klasik",
+      harga: 120000,
+      emoji: "🍮"
+    },
+    {
+      id: 5,
+      nama: "Brownies Panggang Almond",
+      harga: 80000,
+      emoji: "🍫"
+    },
+    {
+      id: 6,
+      nama: "Macaron Perancis",
+      harga: 150000,
+      emoji: "🍪"
+    }
+  ];
+
+  // State Aplikasi
+  let kueTerpilih = null;
+  let riwayatTransaksi = [];
+
+  // Format Angka ke Rupiah
+  function formatRupiah(angka) {
+    return "Rp " + new Intl.NumberFormat("id-ID").format(angka);
+  }
+
+  // 2. Inisialisasi Halaman
+  function inisialisasiHalaman() {
+    // Isi Dropdown Kue secara dinamis
+    const selectKue = document.getElementById('select-kue');
+    daftarKue.forEach(kue => {
+      const option = document.createElement('option');
+      option.value = kue.id;
+      option.innerText = `${kue.nama} (${formatRupiah(kue.harga)})`;
+      selectKue.appendChild(option);
+    });
+
+    // Membaca ID kue dari URL (?id=X) jika ada
+    const urlParams = new URLSearchParams(window.location.search);
+    const idParam = parseInt(urlParams.get('id'));
+
+    if (idParam) {
+      // Set dropdown ke ID kue terpilih
+      selectKue.value = idParam;
+      ubahPilihanKue();
+    }
+
+    // Ambil riwayat transaksi dari localStorage
+    ambilRiwayatDariLocalStorage();
+  }
+
+  // 3. Fungsi memantau perubahan pilihan kue di dropdown
+  function ubahPilihanKue() {
+    const selectKue = document.getElementById('select-kue');
+    const idKue = parseInt(selectKue.value);
+
+    // Cari kue yang sesuai
+    kueTerpilih = daftarKue.find(k => k.id === idKue);
+
+    if (kueTerpilih) {
+      // Update preview card
+      document.getElementById('preview-kue-emoji').innerText = kueTerpilih.emoji;
+      document.getElementById('preview-kue-nama').innerText = kueTerpilih.nama;
+      document.getElementById('preview-kue-harga').innerText = formatRupiah(kueTerpilih.harga);
+    }
+
+    // Hitung ulang total pembayaran
+    hitungTotal();
+  }
+
+  // 4. Menghitung Total Harga Pemesanan secara Real-time
+  function hitungTotal() {
+    if (!kueTerpilih) {
+      document.getElementById('transaksi-total-harga').innerText = "Rp 0";
+      return;
+    }
+
+    const qty = parseInt(document.getElementById('input-qty').value) || 0;
+    const total = kueTerpilih.harga * qty;
+
+    document.getElementById('transaksi-total-harga').innerText = formatRupiah(total);
+  }
+
+  // 5. Memproses Pemesanan (Submit Form)
+  function prosesPemesanan(event) {
+    event.preventDefault(); // Cegah refresh halaman
+
+    if (!kueTerpilih) {
+      alert("Silakan pilih kue terlebih dahulu!");
+      return;
+    }
+
+    const namaPemesan = document.getElementById('input-nama').value;
+    const qty = parseInt(document.getElementById('input-qty').value) || 1;
+    const totalHarga = kueTerpilih.harga * qty;
+
+    // Tampilkan Alert Konfirmasi
+    const yakin = confirm("Apakah Anda yakin ingin memesan " + qty + " box " + kueTerpilih.nama + "?");
+
+    if (yakin) {
+      // Alert Berhasil
+      alert(
+        "Pemesanan Berhasil!\n\n" +
+        "Nama Pemesan: " + namaPemesan + "\n" +
+        "Kue: " + kueTerpilih.nama + "\n" +
+        "Harga Satuan: " + formatRupiah(kueTerpilih.harga) + "\n" +
+        "Jumlah Qty: " + qty + "\n" +
+        "Total Bayar: " + formatRupiah(totalHarga)
+      );
+
+      // Tambahkan ke Riwayat Transaksi
+      const transaksiBaru = {
+        no: riwayatTransaksi.length + 1,
+        nama: namaPemesan,
+        kue: kueTerpilih.nama,
+        qty: qty,
+        total: totalHarga
+      };
+      riwayatTransaksi.push(transaksiBaru);
+
+      // Simpan riwayat yang diperbarui ke localStorage
+      simpanRiwayatKeLocalStorage();
+
+      // Render ulang tabel riwayat transaksi
+      renderRiwayatTransaksi();
+
+      // Reset form input
+      document.getElementById('form-pemesanan').reset();
+      kueTerpilih = null;
+      document.getElementById('preview-kue-emoji').innerText = "🎂";
+      document.getElementById('preview-kue-nama').innerText = "Pilih kue terlebih dahulu";
+      document.getElementById('preview-kue-harga').innerText = "Rp 0";
+      document.getElementById('transaksi-total-harga').innerText = "Rp 0";
+    }
+  }
+
+  // 6. Merender Tabel Riwayat Transaksi
+  function renderRiwayatTransaksi() {
+    const tbody = document.getElementById('tabel-riwayat');
+    
+    if (riwayatTransaksi.length === 0) {
+      tbody.innerHTML = `
+        <tr>
+          <td colspan="5" class="text-center text-secondary py-4">Belum ada transaksi pemesanan.</td>
+        </tr>
+      `;
+      return;
+    }
+
+    tbody.innerHTML = ""; // Bersihkan tabel
+    riwayatTransaksi.forEach(transaksi => {
+      const barisHTML = `
+        <tr>
+          <td>${transaksi.no}</td>
+          <td class="fw-semibold">${transaksi.nama}</td>
+          <td>${transaksi.kue}</td>
+          <td>${transaksi.qty}</td>
+          <td class="text-danger fw-bold">${formatRupiah(transaksi.total)}</td>
+        </tr>
+      `;
+      tbody.innerHTML += barisHTML;
+    });
+  }
+
+  // 7. Simpan Riwayat ke LocalStorage
+  function simpanRiwayatKeLocalStorage() {
+    localStorage.setItem('riwayat_transaksi', JSON.stringify(riwayatTransaksi));
+  }
+
+  // 8. Ambil Riwayat dari LocalStorage saat reload/load
+  function ambilRiwayatDariLocalStorage() {
+    const dataLocal = localStorage.getItem('riwayat_transaksi');
+    if (dataLocal) {
+      riwayatTransaksi = JSON.parse(dataLocal);
+    } else {
+      riwayatTransaksi = [];
+    }
+    renderRiwayatTransaksi();
+  }
+
+  // 9. Hapus Riwayat
+  function hapusRiwayat() {
+    const yakin = confirm("Apakah Anda yakin ingin menghapus semua riwayat transaksi?");
+    if (yakin) {
+      riwayatTransaksi = [];
+      simpanRiwayatKeLocalStorage();
+      renderRiwayatTransaksi();
+    }
+  }
+
+  // Jalankan inisialisasi saat halaman dimuat
+  window.onload = function() {
+    inisialisasiHalaman();
+  };
+</script>
+</body>
+</html>

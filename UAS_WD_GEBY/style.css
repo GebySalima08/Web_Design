@@ -1,0 +1,654 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#f5f7f8;
+}
+
+/* Navbar */
+/* =======================
+        NAVBAR
+======================= */
+
+nav{
+    position: sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:10px 8%;
+
+    background:#0F5C63;
+    transition:.3s;
+}
+
+nav.scrolled{
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:90px;
+}
+
+.logo h2{
+    color:white;
+    font-size:28px;
+}
+
+nav ul{
+
+    display:flex;
+    list-style:none;
+    gap:30px;
+
+}
+
+nav ul li a{
+
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+    color:#F47B67;
+
+}
+
+.active{
+
+    color:#F47B67;
+
+}
+
+.nav-btn{
+
+    display:flex;
+    gap:10px;
+
+}
+
+.nav-btn button{
+
+    padding:10px 22px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.login{
+
+    background:white;
+    color:#0F5C63;
+
+}
+
+.login:hover{
+
+    background:#ececec;
+
+}
+
+.register{
+
+    background:#F47B67;
+    color:white;
+
+}
+
+.register:hover{
+
+    background:#de6653;
+
+}
+/* =======================
+      MENU MOBILE
+======================= */
+
+.menu-toggle{
+
+    display:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+
+}
+
+@media(max-width:768px){
+
+.menu-toggle{
+
+display:block;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+}
+
+nav ul{
+
+display:none;
+
+width:100%;
+flex-direction:column;
+
+margin-top:20px;
+
+}
+
+nav ul.active{
+
+display:flex;
+
+}
+
+.nav-btn{
+
+display:none;
+
+}
+
+}
+/* Hero */
+/* =======================
+        HERO
+======================= */
+
+.hero{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:70px 8%;
+
+    background:linear-gradient(
+    135deg,
+    #0F5C63,
+    #18838c);
+
+    color:white;
+
+}
+
+.hero-text{
+
+    width:50%;
+
+}
+
+.hero-text h1{
+
+    font-size:55px;
+    line-height:1.2;
+
+}
+
+.hero-text span{
+
+    color:#FFD166;
+
+}
+
+.hero-text p{
+
+    margin-top:20px;
+
+    font-size:18px;
+
+    line-height:30px;
+
+}
+.hero-btn{
+
+    margin-top:35px;
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.hero-btn button{
+
+    padding:15px 28px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.booking-btn{
+
+    background:#F47B67;
+
+    color:white;
+
+}
+
+.booking-btn:hover{
+
+    transform:translateY(-5px);
+
+    background:#e56d58;
+
+}
+
+.outline{
+
+    background:transparent;
+
+    border:2px solid white !important;
+
+    color:white;
+
+}
+
+.outline:hover{
+
+    background:white;
+
+    color:#0F5C63;
+
+}
+/* Search */
+.search-box{
+    padding:60px 8%;
+    text-align:center;
+}
+
+.search-box h2{
+    color:#0f5c63;
+    margin-bottom:20px;
+}
+
+.search{
+    display:flex;
+    justify-content:center;
+}
+
+.search input{
+    width:500px;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px 0 0 10px;
+}
+
+.search button{
+    background:#f47b67;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:0 10px 10px 0;
+}
+
+/* Kategori */
+.kategori{
+    padding:60px 8%;
+}
+
+.kategori h2{
+    text-align:center;
+    color:#0f5c63;
+    margin-bottom:30px;
+}
+
+.kategori-container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    width:180px;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.card i{
+    font-size:40px;
+    color:#f47b67;
+    margin-bottom:15px;
+}
+
+/* Tukang */
+.tukang{
+    padding:60px 8%;
+}
+
+.tukang h2{
+    text-align:center;
+    color:#0f5c63;
+    margin-bottom:30px;
+}
+
+.tukang-container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.tukang-card{
+    width:300px;
+    background:white;
+    border-radius:15px;
+    text-align:center;
+    padding:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.tukang-card img{
+    width:100px;
+}
+
+.tukang-card h3{
+    margin:10px 0;
+}
+
+.tukang-card button{
+    margin-top:15px;
+    background:#f47b67;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* Cara Kerja */
+.cara-kerja{
+    padding:60px 8%;
+    background:white;
+}
+
+.cara-kerja h2{
+    text-align:center;
+    color:#0f5c63;
+    margin-bottom:40px;
+}
+
+.steps{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.step{
+    background:#0f5c63;
+    color:white;
+    padding:20px 30px;
+    border-radius:10px;
+}
+
+/* Footer */
+footer{
+    background:#0f5c63;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.tukang-card{
+    transition:.3s;
+    cursor:pointer;
+}
+
+.tukang-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.card{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+    background:#0f5c63;
+    color:white;
+}
+
+.card:hover i{
+    color:white;
+}
+
+button{
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.active{
+    color:#F47B67 !important;
+    font-weight:bold;
+}
+
+.booking{
+    width:600px;
+    margin:50px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.booking h1{
+    color:#0F5C63;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.booking input,
+.booking textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.booking button{
+    width:100%;
+    padding:15px;
+    background:#F47B67;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:17px;
+    cursor:pointer;
+}
+
+.booking button:hover{
+    background:#0F5C63;
+}
+/* ========================= */
+/* BOOKING */
+/* ========================= */
+
+.booking-page{
+
+padding:60px;
+
+background:#f5f7f8;
+
+}
+
+.booking-page h1{
+
+text-align:center;
+
+color:#0F5C63;
+
+margin-bottom:40px;
+
+}
+
+.booking-container{
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+flex-wrap:wrap;
+
+}
+
+.booking-left{
+
+width:300px;
+
+background:white;
+
+padding:30px;
+
+text-align:center;
+
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.booking-left img{
+
+width:140px;
+
+margin-bottom:20px;
+
+}
+
+.booking-left h2{
+
+margin-bottom:10px;
+
+}
+
+.booking-left h3{
+
+margin-top:20px;
+
+color:#F47B67;
+
+}
+
+.booking-right{
+
+width:500px;
+
+background:white;
+
+padding:30px;
+
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.booking-right label{
+
+display:block;
+
+margin-top:15px;
+
+font-weight:bold;
+
+}
+
+.booking-right input,
+
+.booking-right textarea,
+
+.booking-right select{
+
+width:100%;
+
+padding:12px;
+
+margin-top:8px;
+
+border:1px solid #ddd;
+
+border-radius:8px;
+
+font-size:15px;
+
+}
+
+.booking-right textarea{
+
+height:80px;
+
+resize:none;
+
+}
+
+.booking-right button{
+
+width:100%;
+
+margin-top:25px;
+
+padding:15px;
+
+background:#F47B67;
+
+color:white;
+
+border:none;
+
+border-radius:8px;
+
+font-size:17px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.booking-right button:hover{
+
+background:#0F5C63;
+
+}

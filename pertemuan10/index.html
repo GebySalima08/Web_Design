@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contoh Penggunaan Array/List pada JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="container">
+        <h2>List Mahasiswa</h2>
+        <div class="row" id="tampil_mhs">
+            
+        </div>
+    </div>
+
+
+    <script>
+        let list_mhs = [
+            {
+                nama: "Budi",
+                nim: "0011223344",
+                jk: 'Laki-laki',
+                jurusan: "Infomatika",
+                gambar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJlyuSm4js130tM3-BA_YS0Ewft33tPCjyepPogBjWd8s02K8r'
+            },
+            {
+                nama: "Putri",
+                nim: "1199004455",
+                jk: 'Perempuan',
+                jurusan: "Sekretaris",
+                gambar: "https://media.suara.com/pictures/653x366/2022/11/16/56175-freya-mobile-legends.jpg"
+            },
+            {
+                nama: "Yusni",
+                nim: "0011223344",
+                jk: 'Perempuan',
+                jurusan: "Digital Bisnis Cominication",
+                gambar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUTJBRonR_Gnq-OpT3-Ro8T7DsEXZQvKHAVLYOQnTbtOY_ZVqE9W_IYF-L&s=10"
+            },
+            {
+                nama: "Khalil",
+                nim: "111111111",
+                jk: 'Laki-laki',
+                jurusan: "Informatika",
+                gambar: 'https://assets.unileversolutions.com/v1/87289799.jpg'
+            },
+        ];
+        
+        let tampil_mhs = document.getElementById('tampil_mhs');
+
+        for (let i = 0; i < list_mhs.length; i++) {
+            tampil_mhs.innerHTML += `
+                <div class="col-md-3">
+                    <div class="card mb-3" style="width: 18rem;">
+                        <div class="card-body">
+                            <img src="${list_mhs[i].gambar}" width="100%" heigh="100px">
+                            <h5 class="card-title">${list_mhs[i].nama}</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Nim:${list_mhs[i].nim}</h6>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Jenis Kelamin:${list_mhs[i].jk}</h6>
+                            <p class="card-text">${list_mhs[i].jurusan}</p>
+                            <a href="#" class="btn btn-primary">Detail</a>
+                        </div>
+                    </div>
+                </div>
+            `
+        }
+
+        // list_mhs.forEach(e => {
+        //     tampil_mhs.innerHTML += `
+        //         <div class="col-md-3">
+        //             <div class="card mb-3" style="width: 18rem;">
+        //                 <div class="card-body">
+        //                     <img src="${e.gambar}" width="100%" heigh="100px">
+        //                     <h5 class="card-title">${e.nama}</h5>
+        //                     <h6 class="card-subtitle mb-2 text-body-secondary">Nim:${list_mhs[i].nim}</h6>
+        //                     <h6 class="card-subtitle mb-2 text-body-secondary">Jenis Kelamin:${list_mhs[i].jk}</h6>
+        //                     <p class="card-text">${e.jurusan}</p>
+        //                     <a href="#" class="btn btn-primary">Detail</a>
+        //                 </div>
+        //             </div>
+        //         </div>
+        //     `
+        // });
+
+
+    </script>
+  </body>
+</html>
